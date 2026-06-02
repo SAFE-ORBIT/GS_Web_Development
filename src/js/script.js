@@ -74,15 +74,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // Lista com os caminhos das imagens e seus textos alternativos
     const imagensSlideshow = [
         {
-            src: "./src/imgs/debris_orbit.png",
+            src: "./src/assets/debris_orbit.png",
             alt: "Ilustracao digital de satelites orbitando a Terra rodeados por pequenos detritos espaciais"
         },
         {
-            src: "./src/imgs/satellite_repair.png",
+            src: "./src/assets/satellite_repair.png",
             alt: "Satelite em orbita utilizando um braco robotico com capsula de resina para auto-reparo de impactos"
         },
         {
-            src: "./src/imgs/space_industry.png",
+            src: "./src/assets/space_industry.png",
             alt: "Estacao espacial futurista com paineis solares e naves na orbita terrestre"
         }
     ];
