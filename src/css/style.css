@@ -339,3 +339,80 @@ nav a.active {
     display: none;
 }
 
+/* --- QUIZ DINÂMICO  --- */
+.quiz-wrapper {
+    border-top: 1px solid var(--border-card);
+    padding-top: var(--spacing-16);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+}
+
+/* Badge indicadora no estilo GeistMono */
+#quiz-numero-pergunta {
+    font-family: var(--font-geistmono);
+    font-size: 12px;
+    color: var(--text-secundario);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+#quiz-pergunta-texto {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-principal);
+}
+
+/* Opcoes do quiz - Botoes de contorno sutil */
+.quiz-opcoes-flex {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+}
+
+.quiz-opcao-btn {
+    background-color: transparent;
+    color: var(--text-principal);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-buttons);
+    padding: var(--spacing-12) var(--spacing-20);
+    text-align: left;
+    cursor: pointer;
+    font-family: var(--font-universalsans);
+    transition: all 0.2s ease;
+}
+
+.quiz-opcao-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--text-principal);
+}
+
+/* Resultado do Quiz */
+#quiz-resultado-container {
+    text-align: center;
+    padding: var(--spacing-20) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-16);
+}
+
+#quiz-resultado-texto {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-principal);
+}
+
+/* RODAPE  */
+footer {
+    background: var(--gradient-rodape);
+    color: var(--text-secundario);
+    text-align: center;
+    padding: var(--spacing-32);
+    font-family: var(--font-geistmono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    border-top: 1px solid var(--border-card);
+    margin-top: auto;
+}
