@@ -416,3 +416,126 @@ footer {
     border-top: 1px solid var(--border-card);
     margin-top: auto;
 }
+
+/* RESPONSIVIDADE ADAPTADA */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: var(--spacing-12);
+        padding: var(--spacing-16);
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-12);
+    }
+
+    .painel-temas {
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .slideshow-wrapper {
+        height: 240px;
+    }
+
+    .slide-ctrl-btn {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .container {
+        margin: var(--spacing-24) auto;
+    }
+}
+
+/* TELA DE ABERTURA (SPLASH SCREEN DE VIDEO) */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0c0c0b; 
+    z-index: 99999;           
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+/* Estado ocultado apos finalizacao */
+#splash-screen.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.splash-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#splash-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Botao de Pular/Entrar sutil sobre o video */
+.btn-site-splash {
+    position: absolute;
+    bottom: var(--spacing-48);
+    background-color: #ffffff; 
+    color: #0c0c0b;            
+    border: none;
+    padding: var(--spacing-12) var(--spacing-32);
+    border-radius: var(--radius-buttons); 
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-universalsans);
+    letter-spacing: -0.025em;
+    transition: background-color 0.2s, transform 0.2s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn-site-splash:hover {
+    background-color: #e5e5e5;
+    transform: scale(1.05);
+}
+
+/* Estilizacao do Titulo no meio do Splash Screen */
+.splash-titulo {
+    position: absolute;
+    font-family: 'Orbitron', var(--font-universalsans);
+    font-size: clamp(36px, 8vw, 72px); 
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    pointer-events: none; 
+    text-align: center;
+    padding: 0 var(--spacing-20);
+    z-index: 10;
+    animation: splashFadeIn 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Animacao premium de entrada do titulo */
+@keyframes splashFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.92);
+        letter-spacing: 0.05em;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        letter-spacing: 0.15em;
+    }
+}
