@@ -1,0 +1,40 @@
+/* Reset basico para garantir consistencia visual entre diferentes navegadores */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border estejam incluidos na largura total */
+}
+
+/* Rolagem suave ao navegar pelos links das secoes */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Configuracoes basicas para o corpo da pagina */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased; /* Melhora a renderizacao das fontes no Chrome/Safari */
+}
+
+/* Evita que imagens ultrapassem o tamanho de seus containers */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Faz com que elementos de formulario herdem a fonte padrao do body */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Remove o sublinhado padrao dos links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove as bolinhas/numeros das listas */
+ul, ol {
+    list-style: none;
+}
