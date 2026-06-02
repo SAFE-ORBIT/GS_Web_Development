@@ -165,6 +165,29 @@
                 </div>
             </div>
         </section>
+
+        <!-- Formulario de Contato com validacao -->
+        <section class="card" id="contato">
+            <h2>Fale Conosco</h2>
+            <!-- A acao e barrada pelo JS se houver campos em branco -->
+            <form id="formulario-contato" class="form-contato">
+                <div class="form-grupo">
+                    <label for="form-nome">Nome Completo</label>
+                    <input type="text" id="form-nome" placeholder="Digite seu nome">
+                </div>
+                <div class="form-grupo">
+                    <label for="form-email">E-mail para Contato</label>
+                    <input type="email" id="form-email" placeholder="nome@exemplo.com">
+                </div>
+                <div class="form-grupo">
+                    <label for="form-mensagem">Mensagem</label>
+                    <textarea id="form-mensagem" rows="4" placeholder="Escreva sua mensagem aqui..."></textarea>
+                </div>
+                <button type="submit" class="btn-site">Enviar Mensagem</button>
+                <!-- Texto que recebe mensagem de erro do JS se houver campo vazio -->
+                <p id="form-erro-mensagem"></p>
+            </form>
+        </section>
     </main>
 
 </body>
