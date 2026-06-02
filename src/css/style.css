@@ -177,3 +177,45 @@ nav a.active {
 #tema-cinza { background-color: #d4d4d8; border: 1px solid #71717a; }
 #tema-azul { background-color: #bae6fd; border: 1px solid #0284c7; }
 
+/* --- CONTEUDO PRINCIPAL (MAIN) --- */
+.container {
+    flex: 1;
+    max-width: 800px;
+    width: 100%;
+    margin: var(--section-gap) auto;
+    padding: 0 var(--spacing-20);
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-gap);
+}
+
+/* --- CARTÕES DE DESTAQUE (CALLOUT CARDS) --- */
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-calloutcards);
+    padding: var(--card-padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--element-gap);
+    transition: border-color 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--border-whisper); /* Mudanca sutil ao passar o mouse */
+}
+
+.card h2 {
+    color: var(--text-principal);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    padding-bottom: var(--spacing-4);
+}
+
+.card p {
+    color: var(--text-secundario);
+    font-size: 16px;
+    line-height: 1.5; 
+    text-align: left; 
+}
