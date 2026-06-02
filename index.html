@@ -145,6 +145,26 @@
             </p>
         </section>
 
+        <!-- Quiz Dinamico Interativo de 10 perguntas -->
+        <section class="card" id="quiz">
+            <h2>Quiz Interativo Espacial</h2>
+            <div class="quiz-wrapper">
+                <!-- Container das perguntas (Exibido inicialmente) -->
+                <div id="quiz-pergunta-container">
+                    <div id="quiz-numero-pergunta">Carregando...</div>
+                    <p id="quiz-pergunta-texto"></p>
+                    <div id="quiz-opcoes-container" class="quiz-opcoes-grid">
+                        <!-- As opcoes de resposta serao inseridas dinamicamente via JS -->
+                    </div>
+                </div>
+                <!-- Container do Resultado (Escondido inicialmente) -->
+                <div id="quiz-resultado-container" style="display: none;">
+                    <h3>Quiz Concluido!</h3>
+                    <p id="quiz-resultado-texto"></p>
+                    <button id="quiz-reiniciar" class="btn-site">Jogar Novamente</button>
+                </div>
+            </div>
+        </section>
     </main>
 
 </body>
