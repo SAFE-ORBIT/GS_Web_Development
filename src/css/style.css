@@ -1,0 +1,94 @@
+/* --- CONFIGURACOES DE FONTES E VARIAVEIS GERAIS --- */
+:root {
+    --font-universalsans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-geistmono: 'Space Mono', ui-monospace, monospace;
+
+    /* Escala de Espacamento */
+    --spacing-4: 4px;
+    --spacing-8: 8px;
+    --spacing-12: 12px;
+    --spacing-16: 16px;
+    --spacing-20: 20px;
+    --spacing-24: 24px;
+    --spacing-32: 32px;
+    --spacing-40: 40px;
+    --spacing-48: 48px;
+    --spacing-64: 64px;
+    --spacing-128: 128px;
+
+    /* Dimensoes de Espacamento do Layout */
+    --section-gap: var(--spacing-48);
+    --card-padding: var(--spacing-16);
+    --element-gap: var(--spacing-12);
+
+    /* Arredondamento */
+    --radius-inputs: 24px;
+    --radius-buttons: 9999px; 
+    --radius-calloutcards: 0px; 
+
+    /* Efeitos de Sombra */
+    --shadow-subtle: rgb(113, 113, 122) 0px 0px 0px 2px;
+}
+
+/* --- CONFIGURACOES DE CORES DOS 3 TEMAS (VARIAVEIS CSS) --- */
+
+/* 1. Tema Padrao */
+body.tema-padrao {
+    --bg-pagina: #0c0c0b;
+    --bg-header: #0c0c0b;
+    --bg-card: #0c0c0b;
+    --border-card: #1f2228;
+    --text-principal: #ffffff;
+    --text-secundario: #7d8187;
+    --border-whisper: #474747;
+    --cor-destaque: #2563eb;
+    --bg-input: #0c0c0b;
+    --bg-botao-preenchido: #ffffff;
+    --text-botao-preenchido: #0c0c0b;
+    --gradient-rodape: linear-gradient(to right, rgba(255, 99, 8, 0.05), rgba(189, 201, 230, 0.05), rgba(151, 196, 255, 0.05));
+}
+
+/* 2. Tema Cinza-claro*/
+body.tema-cinza {
+    --bg-pagina: #d4d4d8;
+    --bg-header: #c4c4c7;
+    --bg-card: #ffffff;
+    --border-card: #a1a1aa;
+    --text-principal: #18181b;
+    --text-secundario: #3f3f46;
+    --border-whisper: #71717a;
+    --cor-destaque: #2563eb;
+    --bg-input: #ffffff;
+    --bg-botao-preenchido: #18181b;
+    --text-botao-preenchido: #ffffff;
+    --gradient-rodape: linear-gradient(to right, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.03));
+}
+
+/* 3. Tema Azul-claro (Light Blue) */
+body.tema-azul {
+    --bg-pagina: #bae6fd;
+    --bg-header: #7dd3fc;
+    --bg-card: #ffffff;
+    --border-card: #38bdf8;
+    --text-principal: #0c4a6e;
+    --text-secundario: #1e3a8a;
+    --border-whisper: #0284c7;
+    --cor-destaque: #0284c7;
+    --bg-input: #ffffff;
+    --bg-botao-preenchido: #0c4a6e;
+    --text-botao-preenchido: #ffffff;
+    --gradient-rodape: linear-gradient(to right, rgba(2, 132, 199, 0.04), rgba(56, 189, 248, 0.08), rgba(2, 132, 199, 0.04));
+}
+
+/* --- ESTILOS GERAIS DO CORPO (BODY) --- */
+body {
+    background-color: var(--bg-pagina);
+    color: var(--text-principal);
+    font-family: var(--font-universalsans);
+    letter-spacing: -0.025em; /* Espacamento compacto do xAI */
+    transition: background-color 0.4s ease, color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
