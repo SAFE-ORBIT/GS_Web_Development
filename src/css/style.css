@@ -271,3 +271,71 @@ nav a.active {
 #slide-anterior { left: var(--spacing-16); }
 #slide-proximo { right: var(--spacing-16); }
 
+/* FORMULÁRIO DE CONTATO  */
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+/* Label de formulario estilo */
+.form-grupo label {
+    font-family: var(--font-geistmono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--text-secundario);
+    text-transform: uppercase;
+}
+
+/* Campos de Entrada Interativos */
+.form-grupo input,
+.form-grupo textarea {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-inputs);
+    padding: var(--spacing-16);
+    color: var(--text-principal);
+    font-size: 16px;
+    font-family: var(--font-universalsans);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+    border-color: var(--cor-destaque);
+    box-shadow: var(--shadow-subtle);
+}
+
+/* Botao Principal Preenchido */
+.btn-site {
+    background-color: var(--bg-botao-preenchido);
+    color: var(--text-botao-preenchido);
+    border: none;
+    padding: var(--spacing-8) var(--spacing-24);
+    border-radius: var(--radius-buttons);
+    font-weight: 400;
+    cursor: pointer;
+    font-family: var(--font-universalsans);
+    transition: background-color 0.2s, opacity 0.2s, filter 0.2s;
+    align-self: flex-start;
+}
+
+.btn-site:hover {
+    filter: brightness(0.9); /* Escurece sutilmente no hover, funcionando em qualquer tema */
+}
+
+#form-erro-mensagem {
+    font-family: var(--font-geistmono);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    margin-top: var(--spacing-4);
+    display: none;
+}
+
