@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Orbit - Monitoramento e Protecao Espacial</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@400;600;700;900&family=Space+Mono&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    
+    <script src="./src/js/script.js" defer></script>
+</head>
+<body>
+
+    <!-- SPLASH SCREEN DE VIDEO (TELA DE ABERTURA) -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <!-- Video em autoplay e mudo para conformidade com navegadores modernose acessibilidade -->
+            <video id="splash-video" autoplay muted playsinline>
+                <source src="./src/imgs/satelite_final.webm" type="video/webm">
+                Seu navegador nao suporta a reproducao de videos em HTML5.
+            </video>
+            <!-- Titulo do grupo no meio do splash screen -->
+            <h1 class="splash-titulo">Safe Orbit</h1>
+            <!-- Botao de skip para pular a animacao -->
+            <button id="splash-btn-pular" class="btn-site-splash">Entrar no Site</button>
+        </div>
+    </div>
+
+    <!-- CABECALHO: Contem o nome da solucao, logo, navegacao e painel de temas -->
+    <header>
+        <div class="header-logo">
+            <img src="./src/imgs/Logo-Safe-Orbit.png" alt="Logotipo da Safe Orbit mostrando um satelite em orbita da Terra" id="img-logo">
+            <h1 id="logo">Safe Orbit</h1>
+        </div>
+        
+        <!-- Menu de navegacao funcional entre as secoes do site -->
+        <nav>
+            <a href="#problema">Problema</a>
+            <a href="#tecnologia">Tecnologias</a>
+            <a href="#objetivos">Objetivos</a>
+            <a href="#publico-alvo">Publico-Alvo</a>
+            <a href="#beneficios">Beneficios</a>
+            <a href="#aplicacoes">Dia a Dia</a>
+            
+            <!-- Painel para selecao dos 3 temas de fundo exigidos -->
+            <div class="painel-temas">
+                <button id="tema-padrao" class="tema-btn" title="Tema Escuro Padrao"></button>
+                <button id="tema-cinza" class="tema-btn" title="Tema Cinza Claro"></button>
+                <button id="tema-azul" class="tema-btn" title="Tema Azul Claro"></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTAINER PRINCIPAL: Centraliza e organiza o conteudo em Flexbox -->
+    <main class="container">
+        
+        <!-- SLIDESHOW: Galeria com 3 imagens relacionadas a Industria Espacial -->
+        <section class="card slideshow-secao">
+            <h2>Galeria Espacial</h2>
+            <div class="slideshow-wrapper">
+                <!-- Imagem inicial carregada. Atributo alt obrigatorio preenchido -->
+                <img id="slideshow-img" src="./src/imgs/debris_orbit.png" alt="Ilustracao digital de satelites orbitando a Terra rodeados por pequenos detritos espaciais">
+                <!-- Botoes de navegacao do slide -->
+                <button id="slide-anterior" class="slide-ctrl-btn" aria-label="Slide anterior">&lt;</button>
+                <button id="slide-proximo" class="slide-ctrl-btn" aria-label="Proximo slide">&gt;</button>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
